@@ -1,4 +1,4 @@
-FROM tomcat:latest
-RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
-COPY ./*.war /usr/local/tomcat/webapps
+from tomcat:latest
+expose 8080
+copy target/maven-web.app.war /usr/local/tomcat/webapps/maven-web.app.war
 
